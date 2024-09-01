@@ -1,151 +1,126 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
+/* General Styles */
 body {
-    background-color: #000; /* Pitch black background */
-    background: linear-gradient(to right, #000, #000); /* Ensures full black background */
-    height: 100vh; /* Full viewport height */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #000; /* Black card background */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* White shadow with glowing effect */
+    overflow: hidden;
+    max-width: 500px;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
 }
 
 .welcome-quote {
     text-align: center;
-    margin-bottom: 3rem; /* Increased gap between welcome quote and form */
+    margin-bottom: 20px;
 }
 
 .logo {
-    width: 150px; /* Increased logo size */
-    margin-bottom: 1rem;
-    animation: rotate 2s ease-in-out; /* Added animation */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+h1 {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #fff; /* White text */
 }
 
-.welcome-quote h1 {
-    font-size: 2rem;
-    color: white;
-    line-height: 1.2;
-}
-
-.welcome-quote .explore, .welcome-quote .connect, .welcome-quote .grow, .welcome-quote .with, .welcome-quote .every {
-    color: white;
-}
-
-.welcome-quote .club {
-    color: rgb(19, 19, 237); /* Blue color for "the Club!" */
-}
-
-.form-container {
-    background: #fff; /* White background for the form container */
-    width: 450px;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(135, 206, 250, 0.9); /* Very thick light sky-blue shadow for depth */
-    position: relative; /* For positioning child elements */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center form elements */
-}
-
-form {
-    width: 100%; /* Full width */
+h1 span {
+    color: #1e90ff; /* Blue color for highlighted text */
 }
 
 .form-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
     text-align: center;
-    padding: 1.3rem;
-    margin-bottom: 0.4rem;
+    color: #1e90ff; /* Blue title */
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    width: 100%; /* Full width */
+    margin-bottom: 15px;
 }
 
 .input-label {
-    color: black; /* Black color for labels */
-    font-size: 0.9rem; /* Slightly smaller font size for labels */
-    margin-bottom: 0.5rem; /* Space between label and input */
-    font-weight: 600;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #fff; /* White label text */
 }
 
-input, select {
-    color: inherit;
+input[type="text"], input[type="email"], input[type="password"], select {
     width: 100%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #757575;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444; /* Darker gray border */
+    font-size: 16px;
+    background-color: #222; /* Darker input background */
+    color: #fff; /* White input text */
 }
 
-input:focus, select:focus {
-    outline: none;
-    border-bottom-color: rgb(15, 15, 223);
+select {
+    background-color: #222; /* Darker select background */
+    color: #fff; /* White select text */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-button.btn {
+.btn {
     width: 100%;
-    padding: 0.75rem;
-    background-color: #1a09ffe4; /* Bright cyan color */
-    color: #ffffff; /* Black text */
+    padding: 10px;
+    background-color: #1e90ff; /* Blue button background */
+    color: #fff; /* White button text */
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-button.btn:hover {
-    background-color: #0b3de2; /* Bright blue color on hover */
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 .or {
-    margin: 1rem 0;
-    color: white;
-}
-
-.icons {
-    margin-bottom: 1rem;
+    text-align: center;
+    margin: 10px 0;
+    color: #999; /* Light gray text */
 }
 
 .links {
-    margin-top: 1rem;
+    text-align: center;
+}
+
+.links p {
+    margin-bottom: 5px;
 }
 
 .links button {
-    border: none;
     background: none;
-    color: rgb(0, 11, 224);
+    border: none;
+    color: #1e90ff; /* Blue link text */
     cursor: pointer;
-    font-size: 1rem;
-}
-
-.recover {
-    text-align: center;
-    margin: 1rem 0;
+    font-size: 14px;
+    text-decoration: underline;
 }
 
 .recover a {
-    color: rgb(0, 0, 255);
+    color: #1e90ff; /* Blue link text */
     text-decoration: none;
 }
 
@@ -153,69 +128,71 @@ button.btn:hover {
     text-decoration: underline;
 }
 
-/* Popup styles */
+/* Popup Styles */
 .popup {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
-    animation: fadeIn 0.5s;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
 }
 
 .popup-content {
-    background-color: #fff;
-    margin: 15% auto;
+    background-color: #000; /* Black popup background */
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
+    width: 90%;
     max-width: 400px;
-    position: relative;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* White shadow with glowing effect */
 }
 
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.5rem;
-    color: #000000;
+    float: right;
+    font-size: 24px;
     cursor: pointer;
+    color: #fff; /* White close button */
 }
 
-.popup label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.popup input {
-    width: calc(100% - 2rem);
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.popup button {
-    width: 100%;
-    padding: 0.5rem;
-    background-color: rgb(14, 14, 214);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.popup button:hover {
-    background-color: #030303;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
     }
-    to {
-        opacity: 1;
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], select, .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-quote h1 {
+        font-size: 18px;
+    }
+
+    .form-title {
+        font-size: 18px;
+    }
+
+    .links button, .recover a {
+        font-size: 12px;
     }
 }
